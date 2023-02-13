@@ -1,0 +1,162 @@
+body {
+  background-color: #36393f;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.form {
+  background-color: #2f3136;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  padding: 20px;
+  width: 80%;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #7289da;
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+
+label,
+input[type="text"],
+button {
+  font-size: 14px;
+}
+
+label {
+  color: #8f8f8f;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  background-color: #2f3136;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 10px;
+  
+  width: 98%;
+}
+input[type="text"] {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #444;
+  margin: 8px 0;
+  outline: none;
+  transition: border 0.3s;
+  
+}
+
+input[type="text"]:focus {
+  border: 1px solid #000;
+  box-shadow: 0 0 10px #000;
+}
+
+input::placeholder {
+  color: #777;
+}
+
+button {
+  background-color: #7289da;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: larger;
+}
+
+button:hover {
+  background-color: #5f6bdd;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  background-color: #2f3136;
+  border-radius: 8px;
+  color: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+p {
+  color: #8f8f8f;
+  text-align: center;
+  margin: 20px 0;
+}
+
+button.delete {
+  background-color: #dc3545;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 10px 20px;
+  
+}
+
+button.delete:hover {
+  background-color: #c82333;
+}
+
+/*Loading animasyonu*/
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-left: 8em;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #8f8f8f transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.yukleniyor{
+  font-size: larger;
+  color: #8f8f8f;
+}
+img {
+  width: 20%;
+  height: 20%;
+}
