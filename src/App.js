@@ -29,13 +29,13 @@ const App = () => {
     event.preventDefault();
     try {
       setPending(true)
-      await axios.post("http://localhost:5000/blogs", { name, body , img , ytlink });
+      await axios.post("https://api-y38j.onrender.com/blogs", { name, body , img , ytlink });
       setName("");
       setBody("");
       setImg("");
       setYtlink("");
       
-      const result = await axios.get("http://localhost:5000/blogs");
+      const result = await axios.get("https://api-y38j.onrender.com/blogs");
       
       setPending(false)
       setData(result.data);
@@ -48,8 +48,8 @@ const App = () => {
   const handleDelete = async (id) => {
     try {
       setPending(true)
-      await axios.delete(`http://localhost:5000/blogs/${id}`);
-      const result = await axios.get("http://localhost:5000/blogs");
+      await axios.delete(`https://api-y38j.onrender.com/blogs/${id}`);
+      const result = await axios.get("https://api-y38j.onrender.com/blogs");
       setData(result.data);
       setPending(false)
     } catch (error) {
