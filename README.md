@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# React basit blog denemesi
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://neinphobia.github.io/reactBlog/
 
 ## Available Scripts
 

@@ -20,6 +20,7 @@ const blogSchema = new mongoose.Schema({
 const Blog = mongoose.model('Blog', blogSchema);
 
 app.get('/blogs', (req, res) => {
+<<<<<<< HEAD
   Blog.find({}, (err, blogs) => {
     if (err) {
       res.status(400).send(err);
@@ -29,6 +30,17 @@ app.get('/blogs', (req, res) => {
     }
   });
   
+=======
+ Blog.find({}, (err, blogs) => {
+  if (err) {
+    res.status(400).send(err);
+  } else {
+    const sortedBlogs = blogs.sort((a, b) => b._id.getTimestamp() - a._id.getTimestamp());
+    res.status(200).send(sortedBlogs);
+  }
+});
+
+>>>>>>> f500ec084de3c8e1c106ea34b155be85501619ec
 });
 
 app.post('/blogs', (req, res) => {
