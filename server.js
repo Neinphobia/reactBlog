@@ -24,9 +24,11 @@ app.get('/blogs', (req, res) => {
     if (err) {
       res.status(400).send(err);
     } else {
-      res.status(200).send(blogs);
+      const sortedBlogs = blogs.sort((a, b) => b._id.getTimestamp() - a._id.getTimestamp());
+      res.status(200).send(sortedBlogs);
     }
   });
+  
 });
 
 app.post('/blogs', (req, res) => {
