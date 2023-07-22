@@ -13,6 +13,7 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        //build script calismiyor mu anlamadim ki.
         setPending(true);
         const result = await axios.get(
           "https://api-for-react-neinphobia.vercel.app/blogs"
